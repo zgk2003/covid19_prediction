@@ -30,7 +30,7 @@
 \maketitle
 
 \begin{abstract}
-Since 2020, the COVID-19 pandemic has affected the world in different aspects and infected thousands of people. Patients with COVID-19 infections have different clinical symptoms and outcomes. In this project, we used different machine learning models to explore the relationship between different symptoms and whether the patients are tested positive for COVID-19. \par
+Since 2020, the COVID-19 pandemic has affected the world in different aspects and infected thousands of people. Patients with COVID-19 infections have different clinical symptoms and outcomes. In this project, we used different machine learning models to explore the relationship between different symptoms and whether the patients are tested positive for COVID-19. We achieved an accuracy of nearly 90\% with some models. \par
 Specifically, we cleaned our data set and conducted some exploratory data analysis (EDA) to determine which symptoms are highly linked to a positive diagnosis of COVID-19. Then we fitted several classification models on this dataset and compared their performance metrics with respect to different hyperparameters. Finally, we analyzed the differences in symptoms between COVID-19 and influenza. 
 
 
@@ -134,7 +134,7 @@ After running the three models above, it is obvious that our data likely has a h
 The relatively high Bayes Optimal Error is likely due to the similar symptoms presented by COVID-19 and influenza. In the following section, we try to present a solution to this issue.
 
 \section*{COVID-19 vs Influenza}
-As has been mentioned above multiple times, the differentiation between COVID-19 and influenza, a major limit on the accuracy of our current models, is an important task that we need to solve. However, our current dataset is limited in that its features are mostly binary and not continuous. For example, body temperature, which is represented in our dataset as a binary variable(fever), could have been any positive real number, as measured by the physician on a clinical basis. After researching on existing literature and consulting the course staff, we decide to utilize another dataset, provided by the West Virginia University Hospital that preserves more detailed data about 3,884 patients, to accomplish this task \cite{influenza}. A summary of the data is presented in the table below.
+As has been mentioned above multiple times, the differentiation between COVID-19 and influenza, a major limit on the accuracy of our current models, is an important task that we need to solve. However, our current dataset is limited in that its features are mostly binary and not continuous. For example, body temperature, which is represented in our dataset as a binary variable(fever), could have been any positive real number, as measured by the physician on a clinical basis. After researching on existing literature and consulting the course staff, we decide to utilize another dataset, provided by the West Virginia University Hospital that preserves more detailed data about 3,883 patients, to accomplish this task \cite{influenza}. A summary of the data is presented in the table below.
 
 \begin{table}[H]
 \centering
@@ -151,7 +151,7 @@ No. of Deaths & 261 & 51 & 51  \\
 \label{Table}
 \end{table}
 
-The dataset contains 3883 observations. There are 8 features, including race and ethnicity (categorical), body temperature at admission (continuous positive number), sex (binary between male and female), systolic blood pressure (continuous positive number), diastolic blood pressure (continuous positive number), heart rate (positive real number), oxygen saturation (positive real number), and respiratory rate (positive real number). The results of influenza and COVID-19 tests are both recorded in the dataset. \par
+The dataset contains 3,883 observations. There are 8 features, including race and ethnicity (categorical), body temperature at admission (continuous positive number), sex (binary between male and female), systolic blood pressure (continuous positive number), diastolic blood pressure (continuous positive number), heart rate (positive real number), oxygen saturation (positive real number), and respiratory rate (positive real number). The results of influenza and COVID-19 tests are both recorded in the dataset. \par
 After dropping the NaN values, we are left with around 3500 observations that are sufficient for our purposes. We used one-hot encoding for the categorical variables and also normalized our dataset using min-max scaling, similar to what we did for the first dataset. We split our data into training and testing sets according to the 80-20 proportion.\par
 
 
