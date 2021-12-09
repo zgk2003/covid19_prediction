@@ -1,2 +1,7 @@
 *.csv
+*.ipynb
+*.png
+*.jpg
+*.tex
+*.gz
 .DS_Store
